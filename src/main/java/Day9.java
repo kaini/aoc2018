@@ -56,7 +56,7 @@ public class Day9 {
 
         return new AdvanceResult<>(iterator, value);
     }
-}
 
-record AdvanceResult<T>(ListIterator<T> newIterator, T value) {
+    private record AdvanceResult<T>(ListIterator<T> newIterator, T value) {
+    }
 }

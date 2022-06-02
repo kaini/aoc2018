@@ -46,16 +46,17 @@ public class Day10 {
         }
         System.out.println(second);
     }
-}
 
-record Light(int x, int y, int dx, int dy) {
-    public Light move() {
-        return new Light(x + dx, y + dy, dx, dy);
+
+    private record Light(int x, int y, int dx, int dy) {
+        public Light move() {
+            return new Light(x + dx, y + dy, dx, dy);
+        }
+
+        public LightPosition position() {
+            return new LightPosition(x, y);
+        }
     }
 
-    public LightPosition position() {
-        return new LightPosition(x, y);
-    }
+    private record LightPosition(int x, int y) {}
 }
-
-record LightPosition(int x, int y) {}

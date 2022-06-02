@@ -72,7 +72,7 @@ public class Day11 {
         powerLevel -= 5;
         return powerLevel;
     }
-}
 
-record XYPower(int x, int y, int power) {
+    private record XYPower(int x, int y, int power) {
+    }
 }

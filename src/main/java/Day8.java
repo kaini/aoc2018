@@ -47,7 +47,7 @@ public class Day8 {
         }
         return new WalkTree<>(index + metadatas, consumer.apply(tree.subList(index, index + metadatas), childResults));
     }
-}
 
-record WalkTree<T>(int index, T result) {
+    private record WalkTree<T>(int index, T result) {
+    }
 }

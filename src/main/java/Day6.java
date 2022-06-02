@@ -97,7 +97,7 @@ public class Day6 {
         }
         System.out.println(count);
     }
-}
 
-record Point(int x, int y) {
+    private record Point(int x, int y) {
+    }
 }

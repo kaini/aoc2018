@@ -79,27 +79,27 @@ public class Day4 {
         int guard = minute.getValue().entrySet().stream().max(Map.Entry.comparingByValue()).orElseThrow().getKey();
         System.out.println(minute.getKey() * guard);
     }
-}
 
-record Event(
-        LocalDateTime time,
-        EventType type,
-        int guard
-) {
-}
+    private record Event(
+            LocalDateTime time,
+            EventType type,
+            int guard
+    ) {
+    }
 
-enum EventType {
-    BEGIN, FALL_ASLEEP, WAKE_UP;
+    private enum EventType {
+        BEGIN, FALL_ASLEEP, WAKE_UP;
 
-    public static EventType fromString(String s) {
-        if (s.startsWith("Guard")) {
-            return BEGIN;
-        } else if (s.equals("falls asleep")) {
-            return FALL_ASLEEP;
-        } else if (s.equals("wakes up")) {
-            return WAKE_UP;
-        } else {
-            throw new IllegalArgumentException(s);
+        public static EventType fromString(String s) {
+            if (s.startsWith("Guard")) {
+                return BEGIN;
+            } else if (s.equals("falls asleep")) {
+                return FALL_ASLEEP;
+            } else if (s.equals("wakes up")) {
+                return WAKE_UP;
+            } else {
+                throw new IllegalArgumentException(s);
+            }
         }
     }
 }

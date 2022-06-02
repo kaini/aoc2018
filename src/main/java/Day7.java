@@ -86,7 +86,7 @@ public class Day7 {
         }
         return candidate;
     }
-}
 
-record Dependency(String dependant, String dependency) {
+    private record Dependency(String dependant, String dependency) {
+    }
 }

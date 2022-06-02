@@ -54,13 +54,13 @@ public class Day3 {
     public static int index(int left, int top) {
         return left * 1000 + top;
     }
-}
 
-record Claim(
-        int id,
-        int left,
-        int top,
-        int width,
-        int height
-) {
+    private record Claim(
+            int id,
+            int left,
+            int top,
+            int width,
+            int height
+    ) {
+    }
 }
